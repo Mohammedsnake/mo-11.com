@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Owner Dashboard</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 50px;
+        }
+        .notification {
+            position: relative;
+            cursor: pointer;
+        }
+        .notification .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: whit\;
+            border-radius: 50%;
+            padding: 5px 10px;
+        }
+        .messages {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: yellow;
+            box-shadow: 0 0 10px rgba(0, 0, 150, 0.1);
+            width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .message {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .message:hover {
+            background-color: #f1f1f1;
+        }
+        .message-content {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .reply-box {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .reply-box textarea {
+            width: 100%;
+            height: 50px;
+        }
+        .reply-box button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="C:\Users\hp\Downloads\MO-removebg-preview.png" alt="Logo" width="50" height="50">
+
+        <div class="notification" onclick="toggleMessages()">
+            <span>Notifications</span>
+            <span class="badge">4</span>
+        </div>
+    </div>
+    <div class="messages" id="messages">
+        <div class="message" onclick="toggleMessageContent(this)">
+            <p>Order from Khayriyah Ali</p>
+            <div class="message-content">
+                <p>Khariyah Ali: Je, oda yangu haijafika au...</p>
+                <div class="reply-box">
+                    <textarea placeholder="Type your reply..."></textarea>
+                    <button onclick="sendReply()">Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="message" onclick="toggleMessageContent(this)">
+            <p>Order from Mani Salachu</p>
+            <div class="message-content">
+                <p>Mani Salachu:Naomba kupata taarifa za oda yangu?</p>
+                <div class="reply-box">
+                    <textarea placeholder="Type your reply..."></textarea>
+                    <button onclick="sendReply()">Send</button>
+                </div>
+            </div>
+        </div>
+ <div class="message" onclick="toggleMessageContent(this)">
+            <p>Order from Kiduli JR</p>
+            <div class="message-content">
+                <p>Kiduli JR:Oda yangu itafika lini?</p>
+                <div class="reply-box">
+                    <textarea placeholder="Type your reply..."></textarea>
+                    <button onclick="sendReply()">Send</button>
+                </div>
+            </div>
+        </div>
+ <div class="message" onclick="toggleMessageContent(this)">
+            <p>Order from Kinjili JR</p>
+            <div class="message-content">
+                <p>Kinjili JR:Nimepokea oda kaka. Shukran sana. Nimependa mayai..</p>
+                <div class="reply-box">
+                    <textarea placeholder="Type your reply..."></textarea>
+                    <button onclick="sendReply()">Send</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+        function toggleMessages() {
+            var messages = document.getElementById('messages');
+            if (messages.style.display === 'none' || messages.style.display === '') {
+                messages.style.display = 'block';
+            } else {
+                messages.style.display = 'none';
+            }
+        }
+
+        function toggleMessageContent(element) {
+            var content = element.querySelector('.message-content');
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        }
+
+        function sendReply() {
+            alert('Reply sent!');
+        }
+    </script>
+<style>
+.navbar {
+            background-color: #983;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+</style>
+    <div class="navbar">
+        <a href="#about">About Us</a>
+        <a href="#prices">Prices</a>
+        <a href="#order">Place Your Order</a>
+        <a href="#contact">Contact Us</a>
+        
+      
+           
+      
+    </div>
+<marquee><h3>Welcome to MO Mayai</h3></marquee>
+
+    <div class="content">
+        <div id="about" class="section">
+            <h2>About Us <img src="C:\Users\hp\Downloads\MO-removebg-preview.png" alt="Logo" width="100" height="100">
+</h2>
+            <p>Welcome to MO Mayai! We are dedicated to providing the best service possible. MO Mayai is owned by the FOUR BROTHERS Family, a family of four brothers under their two parents. The main sponser of this business is Mohammed Aminu, known as MO.<br><br> There is no need to worry about your privacy or security, MO Mayai is 100% secure and safe place to keep your orders. We provide pure eggs without any additives. Fresh eggs from fresh hens. We are providing delivery services throughout Zanzibar with free off delivery charges. <br><br>We are from Fuoni Chunga, Zanzibar. Of course, we provide the best eggs with the cheapest prices here in Zanzibar. The eggs we provide are nauturally bigger in size compairing to others'. This is because we feed our hens best food and sufficient enough.<br><br> We keep our hens in sufficient ranch, well ventilated, <b>considering</b> a hygiene factor everytime. Incase of any contribution, comment and any suggestion; please contact us.<br><h3><b>NOTE:</b></h3><ul>
+<li>The customer has to return back the trays after using them, this will build a positive relationship between our customers and us.</li>
+<li>Also, there are some discounts provided to customers who will order more than 2 trays. The discount percent will depend on the number of trays that the customer ordered.</li></ul><br><br><b><i><u>Managed by:</u></i></b><br>Aminu Shehe<br>Fahima Mohamed<br>Abdul-rahman Aminu<br>Mohammed Aminu <a href="https://www.instagram.com/mo_little11/?__pwa=1#">His IG</a><br>Abdul-warith Aminu<br>Mundhir Aminu<br><br></p>
+        </div>
+
+        <div id="prices" class="section">
+            <h2>Prices</h2>
+            <p>Here you can find our pricing details:</p>
+            <p><ul>
+             <li>1 tray= 9,000 tsh</li>
+             <li>A discount is there for more than 2 trays. The more the trays, the bigger the discount.<br>
+                 There is a discount also for our regular customers</li>
+            </ul></p>
+           <p><video controls width="300" height="300">
+              <source src="C:\Users\hp\OneDrive\Desktop\WhatsApp Video 2024-09-21 at 12.09.57_0a5a8e68.mp4" type="video/mp4"><br></p>
+               <p><source src="C:\Users\hp\OneDrive\Desktop\WhatsApp Video 2024-09-21 at 12.09.54_7610bbee.mp4" type="video/mp4">
+              </video></p>
+        </div>
+
+        <div id="order" class="section">
+            <h2>Place Your Order</h2>
+            <p>Fill out the form below to place your order.</p>
+            <a href="file:///C:/Users/hp/OneDrive/Desktop/form.html">Fill the form<a/>
+            
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us through the following contact details:</p>
+            <p>Phone number:<a href="tel:+255777730606">+255777730606</a></p>
+            <p>Email:<a href=mailto:"famissa77@gmail.com"> famissa77@gmail.com</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/mo_little11/?__pwa=1#">@mo_little11<a>
+        </div>
+    </div>
+   
+
+</body>
+</html>

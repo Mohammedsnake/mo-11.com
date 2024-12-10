@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+        .payment-section {
+            display: none;
+        }
+    </style>
+    <script>
+        function togglePaymentSection() {
+            var paymentOption = document.querySelector('input[name="payment"]:checked').value;
+            var paymentSection = document.getElementById('payment-section');
+            if (paymentOption === 'online') {
+                paymentSection.style.display = 'block';
+            } else {
+                paymentSection.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Customer Order Form</h2>
+    <form action="file:///C:/Users/hp/OneDrive/Desktop/done.html">
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" required></textarea><br><br>
+
+        <label for="phoneNumber">Phone Number:</label><br>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+
+        <label for="trays">Number of Trays:</label><br>
+        <input type="number" id="trays" name="trays" min="1" max="500" required><br><br>
+
+        <label>Payment Options:</label><br>
+        <input type="radio" id="online" name="payment" value="online" onclick="togglePaymentSection()" required>
+        <label for="online">Online</label><br>
+        <input type="radio" id="cod" name="payment" value="cod" onclick="togglePaymentSection()" required>
+        <label for="cod">Cash on Delivery</label><br><br>
+
+        <div id="payment-section" class="payment-section">
+            <label for="paymentDetails">Payment Details:</label><br>
+            <input type="text" id="paymentDetails" name="paymentDetails"><br><br>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
